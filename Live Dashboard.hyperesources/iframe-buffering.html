@@ -1,0 +1,27 @@
+<div id="target">0.2%</div>
+
+<style>
+body{
+padding:0; margin:0;
+}
+#target{
+  font-size:42px; font-family: lato, helvetica, arial; font-weight: normal; color:#333;
+}
+</style>
+
+<script>
+const numbers = ["0.2%","0.3%","0.1%","0.3%","0.5%","0.2%"];
+const target = document.getElementById('target');
+let inc = 0;
+
+
+function hillel(i){
+  target.innerHTML = numbers[i];
+}
+
+setInterval(function() {
+  if(inc>numbers.length-1){inc=0}
+    hillel(inc);
+    inc++;
+}, 5000);
+</script>

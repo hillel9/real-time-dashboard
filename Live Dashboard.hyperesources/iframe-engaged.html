@@ -1,0 +1,27 @@
+<div id="target">21,007.1 Kbps</div>
+
+<style>
+body{
+padding:0; margin:0;
+}
+#target{
+  font-size:42px; font-family: lato, helvetica, arial; font-weight: normal; color:#333;
+}
+</style>
+
+<script>
+const numbers = ["21,086.2 Kbps","21,083.1 Kbps","21,029.0 Kbps","21,031.8 Kbps","21,052.7 Kbps"];
+const target = document.getElementById('target');
+let inc = 0;
+
+
+function hillel(i){
+  target.innerHTML = numbers[i];
+}
+
+setInterval(function() {
+  if(inc>numbers.length-1){inc=0}
+    hillel(inc);
+    inc++;
+}, 5000);
+</script>

@@ -1,0 +1,27 @@
+<div id="target">22,561</div>
+
+<style>
+body{
+padding:0; margin:0;
+}
+#target{
+  font-size:42px; font-family: lato, helvetica, arial; font-weight: normal; color:#333;
+}
+</style>
+
+<script>
+const numbers = ["22,544","22,531","22,534","22,588"];
+const target = document.getElementById('target');
+let inc = 0;
+
+
+function hillel(i){
+  target.innerHTML = numbers[i];
+}
+
+setInterval(function() {
+  if(inc>numbers.length-1){inc=0}
+    hillel(inc);
+    inc++;
+}, 5000);
+</script>
